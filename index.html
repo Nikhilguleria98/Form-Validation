@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form-validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form  class="form" onsubmit="return validSubmit()">
+        <div class="img1"><i class="fa-brands fa-telegram" id="img1"></i></div>
+
+
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" placeholder="Enter your name" id="name" onkeyup="validName()" >
+          <span class="nameError"></span>
+
+        </div>
+
+        <div class="input-group">
+          <label for="number">Phone No.</label>
+          <input type="tel" placeholder="Enter your number" id="number" onkeyup="validNumber()"/>
+          <span class="numberError"></span>
+        </div>
+
+
+        <div class="input-group">
+          <label for="email">Email ID  </label>
+          <input type="email" placeholder="enter your email" id="email" onkeyup="validEmail()" />
+          <span class="emailError"></span>
+        </div>
+
+
+        <div class="input-group">
+          <label for="message">Your Message</label>
+          <textarea rows="5" placeholder="write your message"  id="message" onkeyup="validMessage()"></textarea>
+          <span class="messageError"></span>
+        </div>
+
+<div class="btn">
+    <button type="submit" onclick="return validSubmit()">Submit</button>
+    <span class="submitError"></span>
+</div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
